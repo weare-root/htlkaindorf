@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Informatik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
+
+</head>
+
+<body>
+    <div id="beforeScroll">
+        <nav class="abteilungen flex scrolled">
+            <div id="leftAbt">
+                <a href="/abteilung/informatik.html" title="Informatik" id="abt-info">
+                    <img class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+                </a>
+                <a href="/abteilung/automatisierung.html" title="Automatisierung" id="abt-aut">
+                    <img class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+                </a>
+            </div>
+            <img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">
+            <div id="rightAbt">
+                <a href="/abteilung/mechatronik.html" title="Mechatronik" id="abt-mech">
+                    <img class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+                </a>
+                <a href="/abteilung/robotik.html" title="Robotik" id="abt-rob">
+                    <img class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+                </a>
+            </div>
+        </nav>
+    </div>
+    <script src="/js/main.js"></script>
+    <script>
+        const home = document.getElementsByClassName("home")[0];
+        home.addEventListener("onmouseover", () => {
+            console.log("xd");
+            window.location.href = "/";
+            return false;
+        });
+    </script>
+</body>
+
+</html>

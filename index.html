@@ -8,19 +8,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 
 <body>
-    <nav>
-        <img src="./images/kaindorfText.png" alt="Kaindorf Text">
-        <ul class="abteilungen">
-            <li><img src="./images/abteilungen/info-small.png" alt="Info Small Logo"></li>
-            <li><img src="./images/abteilungen/aut-small.png" alt="Aut Small Logo"></li>
-            <li><img src="./images/abteilungen/mech-small.png" alt="Mech Small Logo"></li>
-            <li><img src="./images/abteilungen/rob-small.png" alt="Rob Small Logo"></li>
-        </ul>
-    </nav>
+    <div id="beforeScroll" class="scroll">
+        <nav class="abteilungen flex unscrolled">
+            <div id="leftAbt">
+                <a class="abt" href="/abteilung/informatik.html" title="Informatik" id="abt-info">
+                    <img class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+                </a>
+                <a class="abt" href="/abteilung/automatisierung.html" title="Automatisierung" id="abt-aut">
+                    <img class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+                </a>
+            </div>
+            <img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">
+            <div id="rightAbt">
+                <a class="abt" href="/abteilung/mechatronik.html" title="Mechatronik" id="abt-mech">
+                    <img class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+                </a>
+                <a class="abt" href="/abteilung/robotik.html" title="Robotik" id="abt-rob">
+                    <img class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+                </a>
+            </div>
+        </nav>
 
+        <div class="scrollDown" onclick="swipe(1)">
+            <p>More</p>
+            <!--<i class="fas fa-angle-double-right fa-1x"></i>-->
+            <i class="fas fa-angle-right"></i><i class="fas fa-angle-right" style="transform: translate(-4px)"></i>
+        </div>
+    </div>
+    
+    <div class="content" id="content-unscrolled">
+
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+        dolor sit amet.
+
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/index.js"></script>
 </body>
+<!--You wanna try some ciscodisco?-->
 
 </html>
