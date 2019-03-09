@@ -1,13 +1,14 @@
 let swipeTrue = true;
+
 let swipe = (delta) => {
     if (delta > 0 && swipeTrue) {
-        let width = window.innerWidth;
-        if(width <= 450) {
-            const kdText = document.getElementById('kaindorfText');
-            kdText.id = kdText.id + "-scrolled";
-        }
         const before = document.getElementsByClassName("scroll")[0];
         before.id = "afterScroll";
+
+        if (window.innerWidth < 600) {
+            const kdText = document.getElementById("kaindorfText");
+            kdText.id = kdText.id + "-scrolled";
+        }
         const nav = document.getElementsByTagName("nav")[0];
         nav.className = nav.className.replace("unscrolled", "scrolled");
         const content = document.getElementById("content-unscrolled");
@@ -22,6 +23,19 @@ let swipe = (delta) => {
         swipeTrue = false;
     }
 };
+
+window.addEventListener("resize", () => {
+    let kdText;
+    kdText = document.getElementById('kaindorfText') || document.getElementById("kaindorfText-scrolled");
+
+    if (!swipeTrue && window.innerWidth < 600) {
+        if (!kdText.id.endsWith("-scrolled")) {
+            kdText.id = kdText.id + "-scrolled";
+        }
+    } else {
+        kdText.id = kdText.id.replace("-scrolled", "");
+    }
+});
 
 document.addEventListener("wheel", (e) => {
     swipe(e.deltaY);

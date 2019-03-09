@@ -34,6 +34,31 @@ nav {
       
   */ }
 
+@media only screen and (max-width: 650px) {
+  .abtLogo {
+    height: 80px; } }
+@media only screen and (max-width: 450px) {
+  .abtLogo {
+    height: 60px; } }
+@media only screen and (max-width: 860px) {
+  #abt-info-scrolled {
+    right: 0;
+    transform: translateX(-300%) !important; }
+
+  #abt-aut-scrolled {
+    right: 0;
+    transform: translateX(-200%) !important; }
+
+  #abt-mech-scrolled {
+    right: 0;
+    transform: translateX(-100%) !important; }
+
+  #abt-rob-scrolled {
+    right: 0;
+    transform: translateX(0) !important; } }
+#kaindorfText-scrolled {
+  display: none; }
+
 .unscrolled {
   height: 128px; }
 
@@ -107,5 +132,5 @@ footer {
   z-index: 10; }
 
 .innerContent {
-  width: 1200px;
+  max-width: 1200px;
   margin: 50px auto; }
