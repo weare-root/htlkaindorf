@@ -14,50 +14,70 @@
 </head>
 
 <body>
+    <nav class="abteilungen flex unscrolled">
+        <div id="leftAbt">
+            <a class="abt" href="/abteilung/informatik.html" title="Informatik" id="abt-info">
+                <img class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+            </a>
+            <a class="abt" href="/abteilung/automatisierung.html" title="Automatisierung" id="abt-aut">
+                <img class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+            </a>
+        </div>
+        <img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">
+        <div id="rightAbt">
+            <a class="abt" href="/abteilung/mechatronik.html" title="Mechatronik" id="abt-mech">
+                <img class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+            </a>
+            <a class="abt" href="/abteilung/robotik.html" title="Robotik" id="abt-rob">
+                <img class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+            </a>
+        </div>
+    </nav>
     <div id="beforeScroll" class="scroll">
-        <nav class="abteilungen flex unscrolled">
-            <div id="leftAbt">
-                <a class="abt" href="/abteilung/informatik.html" title="Informatik" id="abt-info">
-                    <img class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
-                </a>
-                <a class="abt" href="/abteilung/automatisierung.html" title="Automatisierung" id="abt-aut">
-                    <img class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
-                </a>
-            </div>
-            <img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">
-            <div id="rightAbt">
-                <a class="abt" href="/abteilung/mechatronik.html" title="Mechatronik" id="abt-mech">
-                    <img class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
-                </a>
-                <a class="abt" href="/abteilung/robotik.html" title="Robotik" id="abt-rob">
-                    <img class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
-                </a>
-            </div>
-        </nav>
-
         <div class="scrollDown" onclick="swipe(1)">
             <p>More</p>
             <!--<i class="fas fa-angle-double-right fa-1x"></i>-->
             <i class="fas fa-angle-right"></i><i class="fas fa-angle-right" style="transform: translate(-4px)"></i>
         </div>
     </div>
-    
+
     <div class="content" id="content-unscrolled">
-
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-        dolor sit amet.
-
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-
+        <div class="innerContent">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea
+            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+            et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+            ipsum
+            dolor sit amet.
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+            eu
+            feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+            zzril
+            delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+        </div>
+        <footer class="flex">
+            <img src="/images/eu_flag_co_funded.jpg" alt="eu-flag-co-funded" width="100px" />
+            <a href="https://www.facebook.com/HTBLAKaindorf" target="_blank" rel="noreferrer noopener"><img src="/images/face_logo.png"
+                    alt="Facebook-Logo" /></a>
+            <div class="footer-right">
+                <ul class="flex">
+                    <li>Termine</li>
+                    <li>Impressum</li>
+                    <li>DSGVO</li>
+                    <li>Links</li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
     <script src="/js/main.js"></script>

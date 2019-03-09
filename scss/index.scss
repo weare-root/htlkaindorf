@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
+$animDuration: 600ms;
 
 body {
     background-color: #353b48;
 }
 
 .scroll {
-    height: 100%;
+    height: calc(100% - 128px);
     width: 100%;
-    transition: left 1s;
+    transition: left 800ms;
 }
 
 #afterScroll {
@@ -33,6 +34,10 @@ body {
 @media only screen and (max-width: 450px) {
     .abtLogo {
         height: 60px;
+    }
+
+    #kaindorfText-scrolled {
+        display: none;
     }
 }
 
@@ -60,6 +65,12 @@ body {
     }
 }
 
+.scrolled {
+    .abtLogo {
+        height: 100%;
+    }
+}
+
 #leftAbt {
     visibility: hidden;
 }
@@ -68,8 +79,64 @@ body {
     visibility: hidden;
 }
 
+/*
+*   FLY IN AFTER SCROLL
+*/
+#abt-info-scrolled {
+    animation: fly-abt-after-scroll $animDuration ease-out;
+    animation-fill-mode: forwards;
+    position: absolute;
+    transform: translate(-200%);
+    transition: width $animDuration, height $animDuration;
+}
+
+#abt-aut-scrolled {
+    animation: fly-abt-after-scroll $animDuration ease-out;
+    animation-delay: 50ms;
+    animation-fill-mode: forwards;
+    position: absolute;
+    transform: translate(-100%);
+    transition: width $animDuration, height $animDuration;
+}
+
+#abt-mech-scrolled {
+    animation: fly-abt-after-scroll $animDuration ease-out;
+    animation-delay: 100ms;
+    animation-fill-mode: forwards;
+    position: absolute;
+    transform: translate(0%);
+    transition: width $animDuration, height $animDuration;
+}
+
+#abt-rob-scrolled {
+    animation: fly-abt-after-scroll $animDuration ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 150ms;
+    position: absolute;
+    transform: translate(100%);
+    transition: width $animDuration, height $animDuration;
+}
+
+
+@keyframes fly-abt-after-scroll {
+    from {
+        top: 50%;
+        height: 144px;
+        visibility: visible;
+    }
+
+    to {
+        top: 0%;
+        height: 60px;
+        visibility: visible;
+    }
+}
+
+/*
+*   FLY IN BEGINNING
+*/
 #abt-info {
-    animation: flyAbt 800ms ease-out;
+    animation: flyAbt $animDuration ease-out;
     animation-fill-mode: forwards;
     position: absolute;
     top: 50%;
@@ -78,8 +145,8 @@ body {
 }
 
 #abt-aut {
-    animation: flyAbt 800ms ease-out;
-    animation-delay: 600ms;
+    animation: flyAbt $animDuration ease-out;
+    animation-delay: 400ms;
     animation-fill-mode: forwards;
     position: absolute;
     top: 50%;
@@ -88,8 +155,8 @@ body {
 }
 
 #abt-mech {
-    animation: flyAbt 800ms ease-out;
-    animation-delay: 1200ms;
+    animation: flyAbt $animDuration ease-out;
+    animation-delay: 800ms;
     animation-fill-mode: forwards;
     position: absolute;
     top: 50%;
@@ -98,8 +165,8 @@ body {
 }
 
 #abt-rob {
-    animation: flyAbt 800ms ease-out;
-    animation-delay: 1800ms;
+    animation: flyAbt $animDuration ease-out;
+    animation-delay: 1200ms;
     animation-fill-mode: forwards;
     position: absolute;
     top: 50%;

@@ -1,5 +1,11 @@
+let swipeTrue = true;
 let swipe = (delta) => {
-    if (delta > 0) {
+    if (delta > 0 && swipeTrue) {
+        let width = window.innerWidth;
+        if(width <= 450) {
+            const kdText = document.getElementById('kaindorfText');
+            kdText.id = kdText.id + "-scrolled";
+        }
         const before = document.getElementsByClassName("scroll")[0];
         before.id = "afterScroll";
         const nav = document.getElementsByTagName("nav")[0];
@@ -9,6 +15,11 @@ let swipe = (delta) => {
         setTimeout(() => {
             content.id = "content-scrolled";
         }, 11);
+        const abts = document.getElementsByClassName("abt");
+        for (let abt of abts) {
+            abt.id = abt.id + "-scrolled";
+        }
+        swipeTrue = false;
     }
 };
 
