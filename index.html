@@ -11,27 +11,33 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <link rel="icon" type="image/png" href="/images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <nav class="abteilungen flex unscrolled">
         <div id="leftAbt">
-            <a class="abt" href="/abteilung/informatik.html" title="Informatik" id="abt-info">
+            <a class="abt" href="/abteilung/informatik.html" id="abt-info">
                 <img class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+                <div class="abtName" id="abt-name-info">Informatik</div>
             </a>
-            <a class="abt" href="/abteilung/automatisierung.html" title="Automatisierung" id="abt-aut">
+            <a class="abt" href="/abteilung/automatisierung.html" id="abt-aut">
                 <img class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+                <div class="abtName" id="abt-name-aut">Automatisierung</div>
             </a>
         </div>
         <img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">
         <div id="rightAbt">
-            <a class="abt" href="/abteilung/mechatronik.html" title="Mechatronik" id="abt-mech">
+            <a class="abt" href="/abteilung/mechatronik.html" id="abt-mech">
                 <img class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+                <div class="abtName" id="abt-name-mech">Mechatronik</div>
             </a>
-            <a class="abt" href="/abteilung/robotik.html" title="Robotik" id="abt-rob">
+            <a class="abt" href="/abteilung/robotik.html" id="abt-rob">
                 <img class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+                <div class="abtName" id="abt-name-rob">Robotik</div>
             </a>
         </div>
+
     </nav>
     <div id="beforeScroll" class="scroll">
         <div class="scrollDown" onclick="swipe(1)">
@@ -43,27 +49,7 @@
 
     <div class="content" id="content-unscrolled">
         <div class="innerContent">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-            sea
-            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-            et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-            ipsum
-            dolor sit amet.
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-            eu
-            feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-            zzril
-            delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+            <div class="announcements"></div>
         </div>
         <footer class="flex">
             <img src="/images/eu_flag_co_funded.jpg" alt="eu-flag-co-funded" width="100px" />
@@ -79,10 +65,10 @@
             </div>
         </footer>
     </div>
-
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/announcements.js"></script>
 </body>
-<!--You wanna try some ciscodisco?-->
+<!--You wanna try some ciscodisco()?-->
 
 </html>

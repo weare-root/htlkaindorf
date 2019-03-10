@@ -1,5 +1,6 @@
 let swipeTrue = true;
 
+//ON SWIPE
 let swipe = (delta) => {
     if (delta > 0 && swipeTrue) {
         const before = document.getElementsByClassName("scroll")[0];
@@ -9,13 +10,15 @@ let swipe = (delta) => {
             const kdText = document.getElementById("kaindorfText");
             kdText.id = kdText.id + "-scrolled";
         }
+
         const nav = document.getElementsByTagName("nav")[0];
         nav.className = nav.className.replace("unscrolled", "scrolled");
         const content = document.getElementById("content-unscrolled");
         content.style.display = "block";
-        setTimeout(() => {
+        setTimeout(() => {      
             content.id = "content-scrolled";
         }, 11);
+
         const abts = document.getElementsByClassName("abt");
         for (let abt of abts) {
             abt.id = abt.id + "-scrolled";
@@ -23,10 +26,9 @@ let swipe = (delta) => {
         swipeTrue = false;
     }
 };
-
+//ON RESIZE
 window.addEventListener("resize", () => {
-    let kdText;
-    kdText = document.getElementById('kaindorfText') || document.getElementById("kaindorfText-scrolled");
+    let kdText = document.getElementById('kaindorfText') || document.getElementById("kaindorfText-scrolled");
 
     if (!swipeTrue && window.innerWidth < 600) {
         if (!kdText.id.endsWith("-scrolled")) {
@@ -40,6 +42,26 @@ window.addEventListener("resize", () => {
 document.addEventListener("wheel", (e) => {
     swipe(e.deltaY);
 });
+
+//ABTS HOVER
+const abts = document.getElementsByClassName("abt");
+for (let abt of abts) {
+    abt.addEventListener("mouseover", (e) => {
+        let query = "#" + abt.id + " .abtName";
+        const name = document.querySelector(query);
+        name.className = name.className + "-hovered";
+    });
+    abt.addEventListener("mouseout", (e) => {
+        let query = "#" + abt.id + " .abtName-hovered";
+        const name = document.querySelector(query);
+        name.className = name.className.replace("-hovered", "");
+    });
+}
+
+
+/*
+ *   NOT NECESSARY TO WOKK PROPERLY
+ */
 
 //animate scrollDown PFEILE
 let pfeile = document.getElementsByClassName('fas fa-angle-right');
@@ -59,11 +81,12 @@ let changePfeil = () => {
         pfeile[0].style.color = "#fff";
         pfeilBool = 0;
     }
-}
+};
 setInterval(function () {
     changePfeil();
 }, 800);
 
+//CISCODISCO STUFF
 let randomColor = () => {
     const randLets = "0123456789ABCDEF";
     let color = "#";
@@ -71,7 +94,7 @@ let randomColor = () => {
         color += randLets[Math.floor(Math.random() * 16)];
     }
     return color;
-}
+};
 
 let ciscodisco = () => {
     setInterval(function () {
@@ -80,4 +103,4 @@ let ciscodisco = () => {
             item.style.backgroundColor = randomColor();
         }
     }, 500);
-}
+};
