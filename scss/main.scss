@@ -1,196 +1,554 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
+//VARIABLEN
+$innerWidth: 1200px;
+$animDuration: 600ms;
+
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    background-color: rgb(177, 177, 177);
-    font-family: "Open Sans", Arial, Helvetica, sans-serif
+	background-color: #fff;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
+//Abteilungs Logos
 .abtLogo {
-    height: 60px;
-    margin: 5px;
+	height: 60px;
+	margin: 5px;
 }
 
+/*
+*	ALLGEMEIN
+*/
 ul,
 ol {
-    list-style: none;
+	list-style: none;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .flex {
-    display: flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
-nav {
-    justify-content: center;
-    width: 100%;
-    background-color: #631175;
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.56);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.56);
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.56);
-    z-index: 5;
+/*
+*	ALLGEMEIN #OVER
+*/
 
+//Abteilungs Logos Navigation
+.abteilungen {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	background-color: #631175;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.56);
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.56);
+	z-index: 5;
 
-    /* 
-        TODO machen wenn geswiped wird
-        
-    */
+	.abtLogo {
+		border-radius: 50%;
+	}
+
+	.abtName {
+		top: 0;
+		position: absolute;
+	}
+
+	//HOVER
+	.abtName-hovered {
+		background-color: white;
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		-webkit-animation: abt-name-fly 1000ms ease;
+		animation: abt-name-fly 1000ms ease;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		overflow: hidden;
+		text-align: center;
+		line-height: 60px;
+		font-size: 25px;
+		letter-spacing: -1px;
+		font-family: "Source Code Pro", Arial, Helvetica, sans-serif;
+		border: 1px solid lightgrey;
+	}
+
+	//HOVER TEXTS
+	#abt-name-info {
+		color: #4370b3;
+	}
+
+	#abt-name-aut {
+		color: #a11c33;
+	}
+
+	#abt-name-mech {
+		color: #df9015;
+	}
+
+	#abt-name-rob {
+		color: #63bb43;
+	}
+
+	#rightAbt a,
+	#leftAbt a {
+		z-index: 10;
+	}
 }
 
-@media only screen and (max-width: 650px) {
-    .abtLogo {
-        height: 80px;
-    }
+/*
+*	Animations for HOVER texts of logo navigation
+*/
+
+@-webkit-keyframes abt-name-fly {
+	0% {
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		letter-spacing: 5px;
+	}
+
+	50% {
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		letter-spacing: 5px;
+	}
+
+	100% {
+		top: 120%;
+		height: 60px;
+		border-radius: 5px;
+		width: 220px;
+		padding: 0 5px;
+	}
 }
 
-@media only screen and (max-width: 450px) {
-    .abtLogo {
-        height: 60px;
-    }
+@keyframes abt-name-fly {
+	0% {
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		letter-spacing: 5px;
+	}
+
+	50% {
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		letter-spacing: 5px;
+	}
+
+	100% {
+		top: 120%;
+		height: 60px;
+		border-radius: 5px;
+		width: 220px;
+		padding: 0 5px;
+	}
 }
 
-@media only screen and (max-width: 860px) {
-    #abt-info-scrolled {
-        right: 0;
-        transform: translateX(-300%) !important;
-    }
+/*
+*	Ankmations for HOVER texts of logo navigation #OVER
+*/
 
-    #abt-aut-scrolled {
-        right: 0;
-        transform: translateX(-200%) !important;
-    }
-
-    #abt-mech-scrolled {
-        right: 0;
-        transform: translateX(-100%) !important;
-    }
-
-    #abt-rob-scrolled {
-        right: 0;
-        transform: translateX(0) !important;
-    }
+//BACKGROUND + SHADOW OF LOGOS
+#abt-logo-info {
+	-webkit-box-shadow: 0px 0px 5px 3px #4370b3;
+	box-shadow: 0px 0px 5px 3px #4370b3;
+	background-color: #4370b3;
 }
 
+#abt-logo-aut {
+	-webkit-box-shadow: 0px 0px 5px 3px #a11c33;
+	box-shadow: 0px 0px 5px 3px #a11c33;
+	background-color: #a11c33;
+}
+
+#abt-logo-mech {
+	-webkit-box-shadow: 0px 0px 5px 3px #df9015;
+	box-shadow: 0px 0px 5px 3px #df9015;
+	background-color: #df9015;
+}
+
+#abt-logo-rob {
+	-webkit-box-shadow: 0px 0px 5px 3px #63bb43;
+	box-shadow: 0px 0px 5px 3px #63bb43;
+	background-color: #63bb43;
+}
+
+/*
+*   FLY IN AFTER SCROLL
+*/
+#abt-info-scrolled {
+	-webkit-animation: fly-abt-after-scroll $animDuration ease-out;
+	animation: fly-abt-after-scroll $animDuration ease-out;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	position: absolute;
+	-webkit-transform: translate(-200%);
+	transform: translate(-200%);
+	-webkit-transition: width $animDuration, height $animDuration;
+	transition: width $animDuration, height $animDuration;
+}
+
+#abt-aut-scrolled {
+	-webkit-animation: fly-abt-after-scroll $animDuration ease-out;
+	animation: fly-abt-after-scroll $animDuration ease-out;
+	-webkit-animation-delay: 50ms;
+	animation-delay: 50ms;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	position: absolute;
+	-webkit-transform: translate(-100%);
+	transform: translate(-100%);
+	-webkit-transition: width $animDuration, height $animDuration;
+	transition: width $animDuration, height $animDuration;
+}
+
+#abt-mech-scrolled {
+	-webkit-animation: fly-abt-after-scroll $animDuration ease-out;
+	animation: fly-abt-after-scroll $animDuration ease-out;
+	-webkit-animation-delay: 100ms;
+	animation-delay: 100ms;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	position: absolute;
+	-webkit-transform: translate(0%);
+	transform: translate(0%);
+	-webkit-transition: width $animDuration, height $animDuration;
+	transition: width $animDuration, height $animDuration;
+}
+
+#abt-rob-scrolled {
+	-webkit-animation: fly-abt-after-scroll $animDuration ease-out;
+	animation: fly-abt-after-scroll $animDuration ease-out;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-delay: 150ms;
+	animation-delay: 150ms;
+	position: absolute;
+	-webkit-transform: translate(100%);
+	transform: translate(100%);
+	-webkit-transition: width $animDuration, height $animDuration;
+	transition: width $animDuration, height $animDuration;
+}
+
+/*
+*	Fly in after scroll animations
+*/
+
+@-webkit-keyframes fly-abt-after-scroll {
+	from {
+		top: 50%;
+		height: 144px;
+		visibility: visible;
+	}
+
+	to {
+		top: 0%;
+		height: 60px;
+		visibility: visible;
+	}
+}
+
+@keyframes fly-abt-after-scroll {
+	from {
+		top: 50%;
+		height: 144px;
+		visibility: visible;
+	}
+
+	to {
+		top: 0%;
+		height: 60px;
+		visibility: visible;
+	}
+}
+/*
+*	FLY IN AFTER SCROLL #OVER
+*/
+
+/*
+*	The Normal navigation (Schule/Service/..)
+*/
+.nav-normal {
+	height: 0;
+	margin: 0;
+	overflow: hidden;
+	top: -40px;
+}
+
+.nav-normal-scrolled {
+	background-color: rgba(228, 228, 228, 0.86);
+	transition: top 500ms;
+	position: absolute;
+	top: 70px;
+	margin: 0;
+	width: 100%;
+	border-bottom: 1px solid grey;
+	height: 40px;
+
+	.flex {
+		justify-content: center;
+
+		li {
+			height: 40px;
+			line-height: 40px;
+
+			a {
+				padding: 0 10px;
+				height: 40px;
+				line-height: 40px;
+				text-decoration: none;
+				color: black;
+			}
+		}
+	}
+}
+
+/*
+*	The Normal navigation #OVER
+*/
+
+// htl kaindorf menschlichkeit LOGO after the scroll
 #kaindorfText-scrolled {
-    display: none;
+	display: none;
 }
 
 .abtName {
-    display: none;
+	display: none;
 }
 
+//Logo navigation before scroll
 .unscrolled {
-    height: 128px;
+	height: 128px;
 }
-
+//Logo navigation after scroll
 .scrolled {
-    height: 70px;
-    top: 0;
-    left: 0;
-    transition: height 1s;
+	height: 70px;
+	top: 0;
+	left: 0;
+	-webkit-transition: height 1s;
+	transition: height 1s;
 
-    a {
-        height: 60px;
-    }
+	a {
+		height: 60px;
+	}
 
-    #kaindorfText {
-        left: 5px;
-        transform: none;
-        top: 10px;
-    }
-
+	#kaindorfText {
+		left: 5px;
+		-webkit-transform: none;
+		transform: none;
+		top: 0px;
+	}
 }
 
+//htl kaindorf menschlichkeit LOGO normally
 #kaindorfText {
-    height: 50px;
-    transition: left 800ms 1ms, top 800ms 1ms;
-    margin: auto 5px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 40px;
-    cursor: pointer;
+	top: 30px;
+	-webkit-transition: left 800ms 1ms, top 800ms 1ms;
+	transition: left 800ms 1ms, top 800ms 1ms;
+	margin: auto 5px;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	cursor: pointer;
+	color: white;
+	letter-spacing: 2px;
+	height: 70px;
+
+	#kaindorfText-top {
+		font-size: 34px;
+		font-family: "Open Sans", Arial, sans-serif;
+		font-weight: 300;
+
+		#bold {
+			font-weight: 700;
+		}
+	}
+}
+/*
+*	the normal content page
+*/
+.content {
+	width: 100%;
+	-webkit-transition: left 800ms 1ms;
+	transition: left 800ms 1ms;
+	position: relative;
+
+	.innerContent {
+		max-width: $innerWidth;
+		margin: 50px auto;
+	}
 }
 
-.content {
-    width: 100%;
-    transition: left 800ms 1ms;
-    position: relative;
+//content before the scroll
+#content-unscrolled {
+	left: 100%;
+	display: none;
 }
+
+//content after the scroll
+#content-scrolled {
+	left: 0;
+	display: block;
+}
+
+/*
+*	the normal content page #OVER
+*/
+
+/*
+*	FOOTER
+*/
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    background-color: white;
+	bottom: 0;
+	width: 100%;
+	height: 300px;
+	background-color: rgba(228, 228, 228, 0.86);
+	border-top: 5px solid #631175;
+	border-bottom: 5px solid #631175;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: auto;
 
-    &>img {
-        width: 150px;
-    }
+	.footer-links {
+		max-width: $innerWidth;
+		margin: 0 auto;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		line-height: 110%;
 
-    &>a {
-        height: 100%;
+		li {
+			border-left: 1px solid black;
+			padding-left: 7px;
+			padding-right: 7px;
+			cursor: pointer;
 
-        img {
-            height: 100%;
-        }
-    }
+			&:first-child {
+				border-left: none;
+				padding-left: 0;
+			}
 
-    .footer-right {
-        width: calc(100% - 150px);
+			&:last-child {
+				padding-right: none;
+			}
 
-        .flex {
-            justify-content: flex-end;
-        }
+			a {
+				position: relative;
+				color: #000;
+				text-decoration: none;
+			}
 
-        ul {
-            list-style-type: none;
-            height: 100%;
+			//animated underline
+			a:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: rgb(29, 29, 29);
+				visibility: hidden;
+				-webkit-transform: scaleX(0);
+				transform: scaleX(0);
+				-webkit-transition: all 0.25s ease-in-out 0s;
+				transition: all 0.25s ease-in-out 0s;
+			}
 
-            li {
-                padding-left: 5px;
-                padding-right: 5px;
-                height: 100%;
-                cursor: pointer;
-                transition: background-color 400ms ease-in-out;
-                text-align: center;
-                line-height: 40px;
+			a:hover:before {
+				visibility: visible;
+				-webkit-transform: scaleX(1);
+				transform: scaleX(1);
+			}
+		}
+	}
 
-                &:hover {
-                    background-color: rgba(167, 167, 167, 0.3);
-                }
-            }
-        }
-    }
+	.footer-images {
+		#facebook {
+			height: 60px;
+
+			img {
+				height: 60px;
+			}
+		}
+
+		#eu-flag-co-founded {
+			height: 60px;
+
+			img {
+				height: 60px;
+			}
+		}
+	}
 }
 
-#content-unscrolled {
-    left: 100%;
-    display: none;
+/*
+*	FOOTER #OVER
+*/
+
+@media only screen and (max-width: 650px) {
+	.abtLogo {
+		height: 80px;
+	}
 }
 
-#content-scrolled {
-    left: 0;
-    display: block;
+@media only screen and (max-width: 450px) {
+	.abtLogo {
+		height: 60px;
+	}
 }
 
-#rightAbt a,
-#leftAbt a {
-    z-index: 10;
-}
+@media only screen and (max-width: 860px) {
+	#abt-info-scrolled {
+		right: 0;
+		-webkit-transform: translateX(-300%) !important;
+		transform: translateX(-300%) !important;
+	}
 
-.innerContent {
-    max-width: 1200px;
-    margin: 50px auto;
+	#abt-aut-scrolled {
+		right: 0;
+		-webkit-transform: translateX(-200%) !important;
+		transform: translateX(-200%) !important;
+	}
+
+	#abt-mech-scrolled {
+		right: 0;
+		-webkit-transform: translateX(-100%) !important;
+		transform: translateX(-100%) !important;
+	}
+
+	#abt-rob-scrolled {
+		right: 0;
+		-webkit-transform: translateX(0) !important;
+		transform: translateX(0) !important;
+	}
 }

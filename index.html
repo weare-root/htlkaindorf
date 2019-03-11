@@ -18,24 +18,42 @@
     <nav class="abteilungen flex unscrolled">
         <div id="leftAbt">
             <a class="abt" href="/abteilung/informatik.html" id="abt-info">
-                <img class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+                <img id="abt-logo-info" class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
                 <div class="abtName" id="abt-name-info">Informatik</div>
             </a>
             <a class="abt" href="/abteilung/automatisierung.html" id="abt-aut">
-                <img class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+                <img id="abt-logo-aut" class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
                 <div class="abtName" id="abt-name-aut">Automatisierung</div>
             </a>
         </div>
-        <img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">
+        <div id="kaindorfText">
+            <div id="kaindorfText-top">
+                <span id="light">htbla</span><span id="bold">kaindorf</span>
+            </div>
+            <div id="kaindorfText-bottom">
+                <span id="light">Leistung mit Menschlichkeit</span>
+            </div>
+        </div>
+        <!--<img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">-->
         <div id="rightAbt">
             <a class="abt" href="/abteilung/mechatronik.html" id="abt-mech">
-                <img class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+                <img id="abt-logo-mech" class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
                 <div class="abtName" id="abt-name-mech">Mechatronik</div>
             </a>
             <a class="abt" href="/abteilung/robotik.html" id="abt-rob">
-                <img class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+                <img id="abt-logo-rob" class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
                 <div class="abtName" id="abt-name-rob">Robotik</div>
             </a>
+        </div>
+
+        <div class="nav-normal">
+            <ul class="flex">
+                <li><a href="#">Schule</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Aktuelles</a></li>
+                <li><a href="#">Anmeldung</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
         </div>
 
     </nav>
@@ -49,19 +67,20 @@
 
     <div class="content" id="content-unscrolled">
         <div class="innerContent">
+            <nav></nav>
             <div class="announcements"></div>
         </div>
-        <footer class="flex">
-            <img src="/images/eu_flag_co_funded.jpg" alt="eu-flag-co-funded" width="100px" />
-            <a href="https://www.facebook.com/HTBLAKaindorf" target="_blank" rel="noreferrer noopener"><img src="/images/face_logo.png"
-                    alt="Facebook-Logo" /></a>
-            <div class="footer-right">
-                <ul class="flex">
-                    <li>Termine</li>
-                    <li>Impressum</li>
-                    <li>DSGVO</li>
-                    <li>Links</li>
-                </ul>
+        <footer>
+            <ul class="flex footer-links">
+                <li><a href="#">Termine</a></li>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">DSGVO</a></li>
+                <li><a href="#">Links</a></li>
+            </ul>
+            <div class="footer-images">
+                <img id="eu-flag-co-founded" src="/images/eu_flag_co_funded.jpg" alt="eu-flag-co-funded" />
+                <a id="facebook" href="https://www.facebook.com/HTBLAKaindorf" target="_blank" rel="noreferrer noopener"><img
+                        src="/images/face_logo.png" alt="Facebook-Logo" /></a>
             </div>
         </footer>
     </div>

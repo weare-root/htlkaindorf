@@ -7,30 +7,54 @@
     <title>Informatik</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/abteilungen.css">
 </head>
 
 <body>
-    <nav class="abteilungen scrolled flex">
+    <nav class="abteilungen flex scrolled">
         <div id="leftAbt">
-            <a class="abt" href="/abteilung/informatik.html" title="Informatik" id="abt-info">
-                <img class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+            <a class="abt" href="/abteilung/informatik.html" id="abt-info-scrolled">
+                <img id="abt-logo-info" class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+                <div class="abtName" id="abt-name-info">Informatik</div>
             </a>
-            <a class="abt" href="/abteilung/automatisierung.html" title="Automatisierung" id="abt-aut">
-                <img class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+            <a class="abt" href="/abteilung/automatisierung.html" id="abt-aut-scrolled">
+                <img id="abt-logo-aut" class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+                <div class="abtName" id="abt-name-aut">Automatisierung</div>
             </a>
         </div>
-        <img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">
+        <div id="kaindorfText">
+            <div id="kaindorfText-top">
+                <span id="light">htbla</span><span id="bold">kaindorf</span>
+            </div>
+            <div id="kaindorfText-bottom">
+                <span id="light">Leistung mit Menschlichkeit</span>
+            </div>
+        </div>
+        <!--<img id="kaindorfText" src="/images/kaindorfText.png" alt="Kaindorf Text">-->
         <div id="rightAbt">
-            <a class="abt" href="/abteilung/mechatronik.html" title="Mechatronik" id="abt-mech">
-                <img class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+            <a class="abt" href="/abteilung/mechatronik.html" id="abt-mech-scrolled">
+                <img id="abt-logo-mech" class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+                <div class="abtName" id="abt-name-mech">Mechatronik</div>
             </a>
-            <a class="abt" href="/abteilung/robotik.html" title="Robotik" id="abt-rob">
-                <img class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+            <a class="abt" href="/abteilung/robotik.html" id="abt-rob-scrolled">
+                <img id="abt-logo-rob" class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+                <div class="abtName" id="abt-name-rob">Robotik</div>
             </a>
+        </div>
+
+        <div class="nav-normal-scrolled">
+            <ul class="flex">
+                <li><a href="#">Schule</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Aktuelles</a></li>
+                <li><a href="#">Anmeldung</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
         </div>
     </nav>
+
+
     <script src="/js/main.js"></script>
-    </script>
 </body>
 
 </html>
