@@ -4,6 +4,8 @@ body {
 .scroll {
   height: calc(100% - 128px);
   width: 100%;
+  -webkit-transition: left 800ms;
+  -o-transition: left 800ms;
   transition: left 800ms; }
 
 #afterScroll {
@@ -23,6 +25,8 @@ body {
 @media only screen and (max-height: 450px) {
   .abtLogo {
     height: 80px;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
     transform: translateY(50%); } }
 .scrollDown {
   color: white;
@@ -31,11 +35,15 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   font-variant: small-caps;
   font-family: 'ZCOOL QingKe HuangYou', cursive; }
   .scrollDown p {
     display: inline-block;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
     transform: translateY(-4px); }
 
 .scrolled .abtLogo {
@@ -51,36 +59,72 @@ body {
 *   FLY IN AFTER SCROLL
 */
 #abt-info-scrolled {
+  -webkit-animation: fly-abt-after-scroll 600ms ease-out;
   animation: fly-abt-after-scroll 600ms ease-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: absolute;
+  -webkit-transform: translate(-200%);
+  -ms-transform: translate(-200%);
   transform: translate(-200%);
+  -webkit-transition: width 600ms, height 600ms;
+  -o-transition: width 600ms, height 600ms;
   transition: width 600ms, height 600ms; }
 
 #abt-aut-scrolled {
+  -webkit-animation: fly-abt-after-scroll 600ms ease-out;
   animation: fly-abt-after-scroll 600ms ease-out;
+  -webkit-animation-delay: 50ms;
   animation-delay: 50ms;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: absolute;
+  -webkit-transform: translate(-100%);
+  -ms-transform: translate(-100%);
   transform: translate(-100%);
+  -webkit-transition: width 600ms, height 600ms;
+  -o-transition: width 600ms, height 600ms;
   transition: width 600ms, height 600ms; }
 
 #abt-mech-scrolled {
+  -webkit-animation: fly-abt-after-scroll 600ms ease-out;
   animation: fly-abt-after-scroll 600ms ease-out;
+  -webkit-animation-delay: 100ms;
   animation-delay: 100ms;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: absolute;
+  -webkit-transform: translate(0%);
+  -ms-transform: translate(0%);
   transform: translate(0%);
+  -webkit-transition: width 600ms, height 600ms;
+  -o-transition: width 600ms, height 600ms;
   transition: width 600ms, height 600ms; }
 
 #abt-rob-scrolled {
+  -webkit-animation: fly-abt-after-scroll 600ms ease-out;
   animation: fly-abt-after-scroll 600ms ease-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 150ms;
   animation-delay: 150ms;
   position: absolute;
+  -webkit-transform: translate(100%);
+  -ms-transform: translate(100%);
   transform: translate(100%);
+  -webkit-transition: width 600ms, height 600ms;
+  -o-transition: width 600ms, height 600ms;
   transition: width 600ms, height 600ms; }
 
+@-webkit-keyframes fly-abt-after-scroll {
+  from {
+    top: 50%;
+    height: 144px;
+    visibility: visible; }
+  to {
+    top: 0%;
+    height: 60px;
+    visibility: visible; } }
 @keyframes fly-abt-after-scroll {
   from {
     top: 50%;
@@ -94,40 +138,66 @@ body {
 *   FLY IN BEGINNING
 */
 #abt-info {
+  -webkit-animation: flyAbt 600ms ease-out;
   animation: flyAbt 600ms ease-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-200%, -50%);
+  -ms-transform: translate(-200%, -50%);
   transform: translate(-200%, -50%); }
 
 #abt-aut {
+  -webkit-animation: flyAbt 600ms ease-out;
   animation: flyAbt 600ms ease-out;
+  -webkit-animation-delay: 400ms;
   animation-delay: 400ms;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%); }
 
 #abt-mech {
+  -webkit-animation: flyAbt 600ms ease-out;
   animation: flyAbt 600ms ease-out;
+  -webkit-animation-delay: 800ms;
   animation-delay: 800ms;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%); }
 
 #abt-rob {
+  -webkit-animation: flyAbt 600ms ease-out;
   animation: flyAbt 600ms ease-out;
+  -webkit-animation-delay: 1200ms;
   animation-delay: 1200ms;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(100%, -50%);
+  -ms-transform: translate(100%, -50%);
   transform: translate(100%, -50%); }
 
+@-webkit-keyframes flyAbt {
+  0% {
+    visibility: visible;
+    top: 0%; }
+  100% {
+    visibility: visible;
+    top: 50%; } }
 @keyframes flyAbt {
   0% {
     visibility: visible;
@@ -144,8 +214,12 @@ body {
   border-radius: 50%;
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-animation: abt-name-fly 1000ms ease;
   animation: abt-name-fly 1000ms ease;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   overflow: hidden;
   text-align: center;
@@ -154,9 +228,31 @@ body {
   letter-spacing: -1px;
   font-family: "Source Code Pro", Arial, Helvetica, sans-serif; }
 
+@-webkit-keyframes abt-name-fly {
+  0% {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    letter-spacing: 5px; }
+  50% {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    letter-spacing: 5px; }
+  100% {
+    top: 120%;
+    height: 60px;
+    border-radius: 5px;
+    width: 220px;
+    padding: 0 5px; } }
 @keyframes abt-name-fly {
   0% {
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
