@@ -45,21 +45,49 @@
                 <div class="abtName" id="abt-name-rob">Robotik</div>
             </a>
         </div>
+        <div class="btn-container flex">
+            <p>Menü</p>
+            <svg class="btn">
+                <line x1="5" y1="10" x2="45" y2="10" id="line1"></line>
+                <line x1="5" y1="30" x2="45" y2="30" id="middle-closed" class="middle"></line>
+                <line x1="5" y1="50" x2="45" y2="50" id="line2"></line>
+            </svg>
+        </div>
+    </nav>
 
-        <div class="nav-normal">
-            <ul class="flex">
+    <div class="nav-menu">
+        <div class="popup flex">
+            <ul class="flex links">
                 <li><a href="#">Schule</a></li>
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Aktuelles</a></li>
                 <li><a href="#">Anmeldung</a></li>
                 <li><a href="#">Kontakt</a></li>
             </ul>
+            <div class="flex logos">
+                <a class="abt" href="/abteilung/informatik.html" id="abt-info">
+                    <img id="abt-logo-info" class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+                    <div class="abtName" id="abt-name-info">Informatik</div>
+                </a>
+                <a class="abt" href="/abteilung/automatisierung.html" id="abt-aut">
+                    <img id="abt-logo-aut" class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+                    <div class="abtName" id="abt-name-aut">Automatisierung</div>
+                </a>
+                <a class="abt" href="/abteilung/mechatronik.html" id="abt-mech">
+                    <img id="abt-logo-mech" class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+                    <div class="abtName" id="abt-name-mech">Mechatronik</div>
+                </a>
+                <a class="abt" href="/abteilung/robotik.html" id="abt-rob">
+                    <img id="abt-logo-rob" class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+                    <div class="abtName" id="abt-name-rob">Robotik</div>
+                </a>
+            </div>
         </div>
+    </div>
 
-    </nav>
     <div id="beforeScroll" class="scroll">
         <div class="scrollDown" onclick="swipe(1)">
-            <p>More</p>
+            <p>Aktuelles</p>
             <!--<i class="fas fa-angle-double-right fa-1x"></i>-->
             <i class="fas fa-angle-right"></i><i class="fas fa-angle-right" style="transform: translate(-4px)"></i>
         </div>
@@ -67,8 +95,8 @@
 
     <div class="content" id="content-unscrolled">
         <div class="innerContent">
-            <nav></nav>
             <div class="announcements"></div>
+            <div class="aktuelles"></div>
         </div>
         <footer>
             <ul class="flex footer-links">

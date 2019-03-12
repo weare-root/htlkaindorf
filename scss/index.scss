@@ -1,4 +1,5 @@
 $animDuration: 600ms;
+
 .scroll {
 	height: calc(100% - 128px);
 	width: 100%;
@@ -153,3 +154,61 @@ $animDuration: 600ms;
 		top: 50%;
 	}
 }
+
+
+/*
+*	Announcements & Aktuelles
+*/
+
+.announcements {
+	max-width: 1000px;
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px;
+
+	div {
+		width: 100%;
+		padding: 50px 20px;
+		text-align: center;
+		font-family: 'Comfortaa', sans-serif;
+		background-color: #fff;
+		border: 1px solid black;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 30px;
+		transition: all ease-in-out 400ms;
+
+		&:hover {
+			cursor: pointer;
+			margin-top: 5px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+.aktuelles {
+	margin: 50px auto;
+	max-width: 1000px;
+	width: 80%;
+
+	div {
+		display: inline-block;
+		width: 280px;
+		height: 185px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-left: 10px;
+		border: 3px solid rgb(219, 219, 219);
+		border-radius: 5px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+/*
+*	Announcenents #OVER
+*/

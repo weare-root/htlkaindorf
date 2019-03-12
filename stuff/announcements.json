@@ -1,16 +1,14 @@
 {
     "Recruiting-Day": {
         "from": "08.03.2019 - 00:00",
-        "to": "08.03.2019 - 23:59",
-        "background": "green",
-        "text": "white",
-        "message": "Am 8.3.2019 findet der SFG Recruiting Day mit über 100 Firmen an unserer Schule statt"
+        "to": "030.03.2019 - 23:59",
+        "message": "Am 8.3.2019 findet der SFG Recruiting Day mit über 100 Firmen an unserer Schule statt",
+        "border": "rgba(198, 224, 94)"
     },
     "Anmeldung": {
         "from": "25.02.2019 - 00:00",
-        "to": "08.03.2019 - 23:59",
-        "background": "#d289ff",
-        "text": "white",
-        "message": "Anmeldung von 25.2. bis 8.3.2019 im Sekretariat"
+        "to": "13.03.2019 - 23:59",
+        "message": "Anmeldung von 25.2. bis 8.3.2019 im Sekretariat",
+        "border": "rgba(252, 168, 78)"
     }
 }

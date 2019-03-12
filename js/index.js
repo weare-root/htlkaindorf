@@ -23,9 +23,6 @@ let swipe = (delta) => {
 		for (let abt of abts) {
 			abt.id = abt.id + '-scrolled';
 		}
-
-		const navNormal = document.getElementsByClassName('nav-normal')[0];
-		navNormal.className = navNormal.className + '-scrolled';
 		swipeTrue = false;
 	}
 };
