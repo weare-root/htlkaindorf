@@ -1,7 +1,6 @@
 let now = new Date();
 
 $.getJSON("/../stuff/announcements.json", function (data) {
-    var items = [];
     $.each(data, function (key, val) {
         let startTimes = val.to.split(' - ');
         let date = startTimes[0].split('.');
