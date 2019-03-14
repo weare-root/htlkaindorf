@@ -360,8 +360,12 @@ a {
   width: 100%;
   -webkit-transition: left 800ms 1ms;
   transition: left 800ms 1ms;
-  position: relative;
-  margin-top: 80px; }
+  position: absolute;
+  height: calc(100% - 70px); }
+  .content .intro {
+    padding-top: 70px;
+    height: calc(100% - 80px);
+    width: 100%; }
   .content .innerContent {
     max-width: 1200px;
     margin: 20px auto; }

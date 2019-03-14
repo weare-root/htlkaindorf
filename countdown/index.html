@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countdown</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #title {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #counter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+        }
+
+        .whole {
+            border: 1px solid black;
+            margin: 10px;
+            width: 50px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .blatt-left {
+            background-color: red;
+        }
+
+        .blatt-middle {
+            background-color: green;
+        }
+
+        .blatt-right {
+            background-color: blue;
+        }
+
+        #current {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <div id="counter">
+        <div id="days" class="whole">
+            <div class="blatt-left">
+            </div>
+            <div class="blatt-middle">
+            </div>
+            <div class="blatt-right">
+            </div>
+        </div>
+        <div id="hours" class="whole">
+            <div class="blatt">
+            </div>
+            <div class="blatt">
+            </div>
+        </div>
+        <div id="minutes" class="whole">
+            <div class="blatt">
+            </div>
+            <div class="blatt">
+            </div>
+        </div>
+        <div id="seconds" class="whole">
+            <div class="blatt">
+            </div>
+            <div class="blatt">
+            </div>
+        </div>
+    </div>
+    <h3 id="current">testest</h3>
+</body>
+<script>
+    let today = new Date();
+
+    $.getJSON("countdowns.json", function (data) {
+        $.each(data, function (key, val) {
+            document.getElementById("title").innerHTML = val.title;
+            let startsAt = val.startsAt.split(" - ");
+            let date = startsAt[0].split(".");
+            date[1] = date[1] - 1; // months go from 0-11
+            let time = startsAt[1];
+            let startT = new Date(date[2], date[1], date[0], time[0], time[1]);
+
+            if (startT - today >= 0) {
+                let sInt = setInterval(() => {
+                    if (drawCountdown(startT) == -1) {
+                        clearInterval(sInt);
+                        location.reload();
+                    }
+                }, 1000);
+            } else {
+                let endsAt = val.endsAt.split(" - ");
+                let date = endsAt[0].split(".");
+                date[1] = date[1] - 1; // months go from 0-11
+                let time = endsAt[1];
+                let endT = new Date(date[2], date[1], date[0], time[0], time[1]);
+                if (endT - today >= 0) {
+                    document.getElementById("current").innerHTML = val.textStart;
+                }
+            }
+
+        });
+    });
+
+    let drawCountdown = (lala) => {
+        let now = new Date();
+        let distance = lala - now;
+
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 24));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        days = days.toString();
+        for (let i = 0; i < 3 - days.length; i++) {
+            days = "0" + days;
+        }
+        days = days.split('')
+        $("#days .blatt-left").html(days[0]);
+        $("#days .blatt-middle").html(days[1]);
+        $("#days .blatt-right").html(days[2]);
+
+        $("#hours").html(hours);
+        $("#minutes").html(minutes);
+        $("#seconds").html(seconds);
+
+        if (distance < 0) {
+            return -1;
+        }
+        return 0;
+    }
+</script>
+
+</html>
