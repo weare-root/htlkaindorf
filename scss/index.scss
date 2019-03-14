@@ -62,22 +62,14 @@ $animDuration: 600ms;
 	}
 }
 
-#leftAbt {
-	visibility: hidden;
-}
-
-#rightAbt {
-	visibility: hidden;
-}
-
 /*
 *   FLY IN BEGINNING
 */
 #abt-info {
-	-webkit-animation: flyAbt $animDuration ease-out;
+	/* -webkit-animation: flyAbt $animDuration ease-out;
 	animation: flyAbt $animDuration ease-out;
 	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -87,12 +79,12 @@ $animDuration: 600ms;
 }
 
 #abt-aut {
-	-webkit-animation: flyAbt $animDuration ease-out;
+	/* -webkit-animation: flyAbt $animDuration ease-out;
 	animation: flyAbt $animDuration ease-out;
 	-webkit-animation-delay: 400ms;
 	animation-delay: 400ms;
 	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -102,12 +94,12 @@ $animDuration: 600ms;
 }
 
 #abt-mech {
-	-webkit-animation: flyAbt $animDuration ease-out;
+	/* -webkit-animation: flyAbt $animDuration ease-out;
 	animation: flyAbt $animDuration ease-out;
 	-webkit-animation-delay: 800ms;
 	animation-delay: 800ms;
 	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -117,12 +109,13 @@ $animDuration: 600ms;
 }
 
 #abt-rob {
+	/*
 	-webkit-animation: flyAbt $animDuration ease-out;
 	animation: flyAbt $animDuration ease-out;
 	-webkit-animation-delay: 1200ms;
 	animation-delay: 1200ms;
 	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards;*/
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -131,7 +124,7 @@ $animDuration: 600ms;
 	transform: translate(100%, -50%);
 }
 
-@-webkit-keyframes flyAbt {
+/* @-webkit-keyframes flyAbt {
 	0% {
 		visibility: visible;
 		top: 0%;
@@ -153,7 +146,7 @@ $animDuration: 600ms;
 		visibility: visible;
 		top: 50%;
 	}
-}
+} */
 
 
 /*

@@ -81,20 +81,23 @@ a {
     position: absolute;
     right: 5px;
     cursor: pointer;
-    z-index: 10; }
+    z-index: 12;
+    color: white; }
     .abteilungen .btn-container p {
       line-height: 55px;
       height: 55px;
       font-size: 40px;
       text-transform: capitalize;
       font-family: "Open Sans";
-      margin-right: 10px; }
+      margin-right: 10px;
+      z-index: 12; }
     .abteilungen .btn-container .btn {
       height: 55px;
-      width: 50px; }
+      width: 50px;
+      z-index: 12; }
       .abteilungen .btn-container .btn line {
         stroke-width: 3px;
-        stroke: black; }
+        stroke: white; }
       .abteilungen .btn-container .btn .middle {
         transition: all 0.2s; }
       .abteilungen .btn-container .btn #middle-closed {
@@ -263,9 +266,9 @@ a {
     height: 100%;
     z-index: -1;
     background-color: #292929;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0); }
+    position: fixed;
+    left: 0;
+    top: 0; }
   .nav-menu .open {
     z-index: 8;
     visibility: visible;
@@ -316,6 +319,7 @@ a {
 
 .scrolled {
   height: 70px;
+  position: fixed;
   top: 0;
   left: 0;
   -webkit-transition: height 1s;
@@ -356,7 +360,8 @@ a {
   width: 100%;
   -webkit-transition: left 800ms 1ms;
   transition: left 800ms 1ms;
-  position: relative; }
+  position: relative;
+  margin-top: 80px; }
   .content .innerContent {
     max-width: 1200px;
     margin: 20px auto; }

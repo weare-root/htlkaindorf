@@ -46,20 +46,14 @@
 .scrolled .abtLogo {
   height: 100%; }
 
-#leftAbt {
-  visibility: hidden; }
-
-#rightAbt {
-  visibility: hidden; }
-
 /*
 *   FLY IN BEGINNING
 */
 #abt-info {
-  -webkit-animation: flyAbt 600ms ease-out;
-  animation: flyAbt 600ms ease-out;
+  /* -webkit-animation: flyAbt $animDuration ease-out;
+  animation: flyAbt $animDuration ease-out;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,12 +62,12 @@
   transform: translate(-200%, -50%); }
 
 #abt-aut {
-  -webkit-animation: flyAbt 600ms ease-out;
-  animation: flyAbt 600ms ease-out;
+  /* -webkit-animation: flyAbt $animDuration ease-out;
+  animation: flyAbt $animDuration ease-out;
   -webkit-animation-delay: 400ms;
   animation-delay: 400ms;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -82,12 +76,12 @@
   transform: translate(-100%, -50%); }
 
 #abt-mech {
-  -webkit-animation: flyAbt 600ms ease-out;
-  animation: flyAbt 600ms ease-out;
+  /* -webkit-animation: flyAbt $animDuration ease-out;
+  animation: flyAbt $animDuration ease-out;
   -webkit-animation-delay: 800ms;
   animation-delay: 800ms;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -96,12 +90,13 @@
   transform: translate(0, -50%); }
 
 #abt-rob {
-  -webkit-animation: flyAbt 600ms ease-out;
-  animation: flyAbt 600ms ease-out;
+  /*
+  -webkit-animation: flyAbt $animDuration ease-out;
+  animation: flyAbt $animDuration ease-out;
   -webkit-animation-delay: 1200ms;
   animation-delay: 1200ms;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -109,20 +104,29 @@
   -ms-transform: translate(100%, -50%);
   transform: translate(100%, -50%); }
 
-@-webkit-keyframes flyAbt {
-  0% {
-    visibility: visible;
-    top: 0%; }
-  100% {
-    visibility: visible;
-    top: 50%; } }
+/* @-webkit-keyframes flyAbt {
+	0% {
+		visibility: visible;
+		top: 0%;
+	}
+
+	100% {
+		visibility: visible;
+		top: 50%;
+	}
+}
+
 @keyframes flyAbt {
-  0% {
-    visibility: visible;
-    top: 0%; }
-  100% {
-    visibility: visible;
-    top: 50%; } }
+	0% {
+		visibility: visible;
+		top: 0%;
+	}
+
+	100% {
+		visibility: visible;
+		top: 50%;
+	}
+} */
 /*
 *	Announcements & Aktuelles
 */

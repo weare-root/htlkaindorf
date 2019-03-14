@@ -115,7 +115,8 @@ a {
 		position: absolute;
 		right: 5px;
 		cursor: pointer;
-		z-index: 10;
+		z-index: 12;
+		color: white;
 
 		p {
 			line-height: 55px;
@@ -124,15 +125,17 @@ a {
 			text-transform: capitalize;
 			font-family: "Open Sans";
 			margin-right: 10px;
+			z-index: 12;
 		}
 
 		.btn {
 			height: 55px;
 			width: 50px;
+			z-index: 12;
 
 			line {
 				stroke-width: 3px;
-				stroke: black;
+				stroke: white;
 			}
 
 			.middle {
@@ -351,9 +354,9 @@ a {
 		height: 100%;
 		z-index: -1;
 		background-color: rgb(41, 41, 41);
-		position: absolute;
-		left: 50%;
-		transform: translate(-50%, 0);
+		position: fixed;
+		left: 0;
+		top: 0;
 	}
 
 	.open {
@@ -417,6 +420,7 @@ a {
 //Logo navigation after scroll
 .scrolled {
 	height: 70px;
+	position: fixed;
 	top: 0;
 	left: 0;
 	-webkit-transition: height 1s;
@@ -469,6 +473,7 @@ a {
 	-webkit-transition: left 800ms 1ms;
 	transition: left 800ms 1ms;
 	position: relative;
+	margin-top: 80px;
 
 	.innerContent {
 		max-width: $innerWidth;
