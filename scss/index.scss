@@ -160,12 +160,14 @@ $animDuration: 600ms;
 	padding: 10px;
 
 	div {
+		font-size: 20px;
 		width: 100%;
-		padding: 50px 20px;
+		padding: 50px 0px;
 		text-align: center;
 		font-family: 'Comfortaa', sans-serif;
 		background-color: #fff;
-		border: 1px solid black;
+		border: 1px solid lightgrey;
+		border-radius: 15px;
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
@@ -182,22 +184,32 @@ $animDuration: 600ms;
 
 .aktuelles {
 	margin: 50px auto;
-	max-width: 1000px;
+	max-width: 946px;
 	width: 80%;
+	justify-content: center;
+	flex-wrap: wrap;
 
 	div {
-		display: inline-block;
-		width: 280px;
-		height: 185px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		margin-left: 10px;
-		border: 3px solid rgb(219, 219, 219);
-		border-radius: 5px;
+		width: 300px;
+		height: 250px;
+		margin-left: 20px;
+		margin-bottom: 10px;
+		border: 1px solid rgb(54, 54, 54);
+
 
 		&:first-child {
 			margin-left: 0;
+		}
+
+		img {
+			width: 300px;
+		}
+
+		p {
+			max-width: 300px;
+			text-align: center;
+			font-family: "Comfortaa", sans-serif;
+			padding: 0 10px;
 		}
 	}
 }

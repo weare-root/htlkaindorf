@@ -1,10 +1,12 @@
 {
-    "270-landessieg-und-silbermedaille-bei-eurolingua": {
-        "preview": "thumb-Eurolingua2-5c1110562b0225ea8da4e436cf776fd1.jpg",
-        "text": "Landessieg und Silbermedaille bei Eurolingual"
-    },
-    "268-recruiting-day-2019": {
+    "268": {
         "preview": "rec20191.jpg",
-        "text": "Bilder zum Recruiting Day 2019"
+        "text": "Bilder zum Recruiting Day 2019",
+        "link": "268-recruiting-day-2019"
+    },
+    "270": {
+        "preview": "thumb-Eurolingua2-5c1110562b0225ea8da4e436cf776fd1.jpg",
+        "text": "Landessieg und Silbermedaille bei Eurolingual",
+        "link": "270-landessieg-und-silbermedaille-bei-eurolingua"
     }
 }

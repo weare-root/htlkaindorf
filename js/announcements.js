@@ -27,6 +27,8 @@ $.getJSON("/../stuff/aktuelles.json", function (data) {
     var items = [];
     $.each(data, function (key, val) {
         let url = "/stuff/aktuelles-preview/" + val.preview;
-        $(".aktuelles").append(`${"<div style=\"background-image: url(" + url + ")\"></div>"}`);
+        let text = val.text;
+        let link = "/stuff/aktuelles/" + val.link;
+        $(".aktuelles").append(`<div><a href="${link}"><img src="${url}"/></a><p>${text}"</p></div>`);
     });
 });

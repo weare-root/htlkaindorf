@@ -66,7 +66,7 @@ let changePfeil = () => {
 		pfeilBool = 0;
 	}
 };
-setInterval(function() {
+setInterval(function () {
 	changePfeil();
 }, 800);
 
@@ -81,7 +81,7 @@ let randomColor = () => {
 };
 
 let ciscodisco = () => {
-	setInterval(function() {
+	setInterval(function () {
 		const elems = document.body.getElementsByTagName('*');
 		for (let item of elems) {
 			item.style.backgroundColor = randomColor();

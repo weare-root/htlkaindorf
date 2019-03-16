@@ -7,12 +7,12 @@ home.addEventListener("click", () => {
 //ABTS HOVER
 const abts = document.getElementsByClassName("abt");
 for (let abt of abts) {
-    abt.addEventListener("mouseover", (e) => {
+    abt.addEventListener("mouseover", () => {
         let query = "#" + abt.id + " .abtName";
         const name = document.querySelector(query);
         name.className = name.className + "-hovered";
     });
-    abt.addEventListener("mouseout", (e) => {
+    abt.addEventListener("mouseout", () => {
         let query = "#" + abt.id + " .abtName-hovered";
         const name = document.querySelector(query);
         name.className = name.className.replace("-hovered", "");
@@ -28,7 +28,7 @@ let state = false;
 btnCont.addEventListener("click", () => {
     var pos1 = btnL1.getAttribute("y2");
     var pos2 = btnL2.getAttribute("y2");
-    popup.classList.toggle("open")
+    popup.classList.toggle("open");
     if (state === false) {
         state = true;
 
@@ -68,4 +68,14 @@ btnCont.addEventListener("click", () => {
             btnL2.setAttribute("y2", pos2);
         }, 2);
     }
+});
+
+//Pfeil zum runterscrollen
+document.getElementById("down-btn").addEventListener("click", () => {
+    let scrollOptions = {
+        left: 0,
+        top: window.innerHeight - 140,
+        behavior: "smooth"
+    };
+    window.scrollTo(scrollOptions);
 });
