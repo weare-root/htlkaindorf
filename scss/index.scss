@@ -159,7 +159,7 @@ $animDuration: 600ms;
 	margin: 0 auto;
 	padding: 10px;
 
-	div {
+	.announcement-inner {
 		font-size: 20px;
 		width: 100%;
 		padding: 50px 0px;
@@ -173,12 +173,6 @@ $animDuration: 600ms;
 		transform: translateX(-50%);
 		margin-top: 30px;
 		transition: all ease-in-out 400ms;
-
-		&:hover {
-			cursor: pointer;
-			margin-top: 5px;
-			margin-bottom: 25px;
-		}
 	}
 }
 
@@ -189,29 +183,51 @@ $animDuration: 600ms;
 	justify-content: center;
 	flex-wrap: wrap;
 
-	div {
+	.aktuelles-wrapper {
 		width: 300px;
 		height: 250px;
 		margin-left: 20px;
 		margin-bottom: 10px;
 		border: 1px solid rgb(54, 54, 54);
+		position: relative;
+		overflow: hidden;
 
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		div {
+			width: 100%;
+			height: 100%;
+		}
 
 		&:first-child {
 			margin-left: 0;
 		}
 
 		img {
-			width: 300px;
+			height: 180px;
 		}
 
 		p {
-			max-width: 300px;
+			width: 300px;
 			text-align: center;
 			font-family: "Comfortaa", sans-serif;
 			padding: 0 10px;
+			position: absolute;
+			top: 85%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
+}
+
+.content-subtitle {
+	color: black;
+	font-size: 30px;
+	font-family: 'Amatic SC', cursive;
+	text-decoration: underline;
 }
 
 /*

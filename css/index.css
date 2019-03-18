@@ -135,7 +135,7 @@
   width: 80%;
   margin: 0 auto;
   padding: 10px; }
-  .announcements div {
+  .announcements .announcement-inner {
     font-size: 20px;
     width: 100%;
     padding: 50px 0px;
@@ -149,10 +149,6 @@
     transform: translateX(-50%);
     margin-top: 30px;
     transition: all ease-in-out 400ms; }
-    .announcements div:hover {
-      cursor: pointer;
-      margin-top: 5px;
-      margin-bottom: 25px; }
 
 .aktuelles {
   margin: 50px auto;
@@ -160,21 +156,39 @@
   width: 80%;
   justify-content: center;
   flex-wrap: wrap; }
-  .aktuelles div {
+  .aktuelles .aktuelles-wrapper {
     width: 300px;
     height: 250px;
     margin-left: 20px;
     margin-bottom: 10px;
-    border: 1px solid #363636; }
-    .aktuelles div:first-child {
+    border: 1px solid #363636;
+    position: relative;
+    overflow: hidden; }
+    .aktuelles .aktuelles-wrapper a {
+      text-decoration: none;
+      color: black; }
+    .aktuelles .aktuelles-wrapper div {
+      width: 100%;
+      height: 100%; }
+    .aktuelles .aktuelles-wrapper:first-child {
       margin-left: 0; }
-    .aktuelles div img {
-      width: 300px; }
-    .aktuelles div p {
-      max-width: 300px;
+    .aktuelles .aktuelles-wrapper img {
+      height: 180px; }
+    .aktuelles .aktuelles-wrapper p {
+      width: 300px;
       text-align: center;
       font-family: "Comfortaa", sans-serif;
-      padding: 0 10px; }
+      padding: 0 10px;
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.content-subtitle {
+  color: black;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  text-decoration: underline; }
 
 /*
 *	Announcenents #OVER

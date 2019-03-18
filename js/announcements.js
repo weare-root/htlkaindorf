@@ -17,7 +17,7 @@ $.getJSON("/../stuff/announcements.json", function (data) {
             if (now - endT >= 0) {
                 let border = val.border;
                 borderBefore = border.substring(0, border.indexOf(')') - 1) + ",0.5)";
-                $(".announcements").append(`${"<div style=\"box-shadow: 0 0 5px 5px " + borderBefore + "\"><p>" + val.message + "</p></div>"}`);
+                $(".announcements").append(`${"<div class=\"announcement-inner\" style=\"box-shadow: 0 0 5px 5px " + borderBefore + "\"><p>" + val.message + "</p></div>"}`);
             }
         }
     });
@@ -29,6 +29,6 @@ $.getJSON("/../stuff/aktuelles.json", function (data) {
         let url = "/stuff/aktuelles-preview/" + val.preview;
         let text = val.text;
         let link = "/stuff/aktuelles/" + val.link;
-        $(".aktuelles").append(`<div><a href="${link}"><img src="${url}"/></a><p>${text}"</p></div>`);
+        $(".aktuelles").append(`<div class="aktuelles-wrapper"><a href="${link}"><div><img src="${url}"/><p>${text}"</p></div></a></div>`);
     });
 });

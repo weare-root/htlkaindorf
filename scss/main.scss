@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 //VARIABLEN
 $innerWidth: 1200px;
@@ -32,6 +33,14 @@ body {
 ul,
 ol {
 	list-style: none;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	background-color: lightgrey;
+	border: none;
+	margin: 20px;
 }
 
 a {
@@ -353,7 +362,7 @@ a {
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-		background-color: rgb(41, 41, 41);
+		background-color: rgba(41, 41, 41, 0.842);
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -555,6 +564,21 @@ a {
 	.innerContent {
 		max-width: $innerWidth;
 		margin: 10px auto;
+
+		h1,
+		h2 {
+			font-weight: 300;
+			margin-bottom: 5px;
+		}
+
+		h1 {
+			letter-spacing: 2px;
+		}
+
+		ul {
+			list-style: circle;
+			margin: 0 0 9px 25px;
+		}
 	}
 }
 

@@ -5,6 +5,12 @@
         "message": "Am 8.3.2019 findet der SFG Recruiting Day mit über 100 Firmen an unserer Schule statt",
         "border": "rgba(198, 224, 94)"
     },
+    "UrMumGhey": {
+        "from": "08.03.2019 - 00:00",
+        "to": "030.03.2019 - 23:59",
+        "message": "Am 8.3.2019 findet der SFG Recruiting Day mit über 100 Firmen an unserer Schule statt",
+        "border": "rgba(255, 94, 94)"
+    },
     "Anmeldung": {
         "from": "25.02.2019 - 00:00",
         "to": "13.03.2019 - 23:59",
