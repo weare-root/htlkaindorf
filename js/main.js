@@ -1,3 +1,7 @@
+window.onload = () => {
+    htlFooter.parseAll();   //footer
+};
+
 const home = document.getElementById("kaindorfText");
 home.addEventListener("click", () => {
     window.location.href = "/";
@@ -70,12 +74,3 @@ btnCont.addEventListener("click", () => {
     }
 });
 
-//Pfeil zum runterscrollen
-document.getElementById("down-btn").addEventListener("click", () => {
-    let scrollOptions = {
-        left: 0,
-        top: window.innerHeight - 140,
-        behavior: "smooth"
-    };
-    window.scrollTo(scrollOptions);
-});
