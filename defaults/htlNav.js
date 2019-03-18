@@ -52,19 +52,19 @@ const htlNav = {
                 </ul>
                 <div class="flex nav-logos">
                     <a class="flex" href="/abteilung/informatik.html" id="abt-info">
-                        <img id="abt-logo-info" class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
+                        <img class="abtLogo abt-logos-nm" src="/images/abteilungen/info.png" alt="Info Small Logo">
                         <div id="abt-name-info">Informatik</div>
                     </a>
                     <a class="flex" href="/abteilung/automatisierung.html" id="abt-aut">
-                        <img id="abt-logo-aut" class="abtLogo" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
+                        <img class="abtLogo abt-logos-nm" src="/images/abteilungen/aut.png" alt="Aut Small Logo">
                         <div id="abt-name-aut">Automatisierung</div>
                     </a>
                     <a class="flex" href="/abteilung/mechatronik.html" id="abt-mech">
-                        <img id="abt-logo-mech" class="abtLogo" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
+                        <img class="abtLogo abt-logos-nm" src="/images/abteilungen/mech.png" alt="Mech Small Logo">
                         <div id="abt-name-mech">Mechatronik</div>
                     </a>
                     <a class="flex" href="/abteilung/robotik.html">
-                        <img id="abt-logo-rob" class="abtLogo" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
+                        <img class="abtLogo abt-logos-nm" src="/images/abteilungen/rob.png" alt="Rob Small Logo">
                         <div id="abt-name-rob">Robotik</div>
                     </a>
                 </div>
@@ -280,24 +280,49 @@ const htlNav = {
       *	Ankmations for HOVER texts of logo navigation #OVER
       */
       #abt-logo-info {
+        border: 1px solid lightgrey;
+        background-color: #4370b3;
+        background-clip: content-box;
+        transition: all ease-in-out 200ms;
+       }
+      #abt-logo-info:hover {
+        border: 1px solid #4370b3;
         -webkit-box-shadow: 0px 0px 5px 3px #4370b3;
         box-shadow: 0px 0px 5px 3px #4370b3;
-        background-color: #4370b3; }
-      
+      }
+
       #abt-logo-aut {
+        border: 1px solid lightgrey;
+        background-color: #a11c33;
+        transition: all ease-in-out 200ms;
+      }
+      #abt-logo-aut:hover {
+        border: 1px solid #a11c33;
         -webkit-box-shadow: 0px 0px 5px 3px #a11c33;
         box-shadow: 0px 0px 5px 3px #a11c33;
-        background-color: #a11c33; }
+      }
       
       #abt-logo-mech {
+        border: 1px solid lightgrey;
+        transition: all ease-in-out 200ms;
+        background-color: #df9015; 
+      }
+      #abt-logo-mech:hover {
+        border: 1px solid #df9015;
         -webkit-box-shadow: 0px 0px 5px 3px #df9015;
         box-shadow: 0px 0px 5px 3px #df9015;
-        background-color: #df9015; }
+      }
       
       #abt-logo-rob {
+        border: 1px solid lightgrey;
+        transition: all ease-in-out 200ms;
+        background-color: #63bb43; 
+      }
+      #abt-logo-rob:hover {
+        border: 1px solid #63bb43;
         -webkit-box-shadow: 0px 0px 5px 3px #63bb43;
         box-shadow: 0px 0px 5px 3px #63bb43;
-        background-color: #63bb43; }
+      }
       
       /*
       *   FLY IN AFTER SCROLL
@@ -383,7 +408,8 @@ const htlNav = {
         position: absolute;
         top: 0;
         width: 100%;
-        height: 100%; }
+        height: 100%; 
+      }
         .nav-menu .popup {
           transition: opacity ease 1s;
           opacity: 0;
@@ -391,83 +417,82 @@ const htlNav = {
           width: 100%;
           height: 100%;
           z-index: -1;
-          background-color: rgba(41, 41, 41, 0.842);
+          background-color: rgba(255, 255, 255, 0.442);
           position: fixed;
           left: 0;
-          top: 0; }
+          top: 0; 
+        }
           .nav-menu .popup .links {
             width: 50%;
             height: 100%;
             flex-direction: column;
-            justify-content: center; }
+            justify-content: center; 
+          }
             .nav-menu .popup .links li {
+              width: 150px;
               line-height: 40px;
               text-align: center;
-              margin: 0 auto; }
+              margin: 0 auto;
+              margin-bottom: 20px;
+            }
               .nav-menu .popup .links li a {
+                border: 1px solid #631175;
+                background-color: white;
                 padding: 15px 20px;
                 width: 100%;
-                color: white;
+                color: #631175;
                 display: block;
-                transition: background-color 500ms;
-                border-radius: 5px; }
+                transition-property: background-color, color;
+                transition-timing-function: ease-in-out;
+                transition-duration: 300ms;
+                border-radius: 5px; 
+              }
                 .nav-menu .popup .links li a:hover {
-                  background-color: #4b4b4b; }
+                  color: white;
+                  background-color: #631175; 
+                }
+          
           .nav-menu .popup .nav-logos {
             justify-content: center;
             flex-direction: column;
             width: 50%;
-            height: 100%; }
+            height: 100%;
+          }
+          .nav-menu .popup .nav-logos .abt-logos-nm {
+            background-color: #631175;
+            background-clib: content-box;
+            border: 2px solid #631175;
+          }
             .nav-menu .popup .nav-logos a {
-              transition: background-color 500ms;
+              border: 1px solid #631175;
+              border-radius: 5px;
+              transition-property: background-color, color;
+              transition-timing-function: ease-in-out;
+              transition-duration: 300ms;
               position: static !important;
               top: 0 !important;
               left: 0 !important;
               transform: none !important;
               margin: 10px auto;
-              color: white; }
+              color: #631175; 
+            }
               .nav-menu .popup .nav-logos a:hover {
-                background-color: #414141; }
+                background-color: #631175;
+                color: white;
+              }
               .nav-menu .popup .nav-logos a img {
-                border-radius: 50%; }
+                border-radius: 50%; 
+              }
               .nav-menu .popup .nav-logos a div {
                 width: 180px;
-                line-height: 140px;
-                text-align: center; }
+                line-height: 156px;
+                text-align: center; 
+              }
         .nav-menu .open {
           z-index: 8;
           visibility: visible;
           opacity: 1; }
       
-      /*
-      .nav-normal-scrolled {
-          background-color: rgba(228, 228, 228, 0.86);
-          transition: top 500ms;
-          position: absolute;
-          top: 70px;
-          margin: 0;
-          width: 100%;
-          border-bottom: 1px solid grey;
-          height: 40px;
-      
-          .flex {
-              justify-content: center;
-      
-              li {
-                  height: 40px;
-                  line-height: 40px;
-      
-                  a {
-                      padding: 0 10px;
-                      height: 40px;
-                      line-height: 40px;
-                      text-decoration: none;
-                      color: black;
-                  }
-              }
-          }
-      }
-      */
       /*
       *	The Normal navigation #OVER
       */
