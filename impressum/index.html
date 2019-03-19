@@ -101,7 +101,12 @@
 	<!--Defaults-->
 	<script src="../defaults/htlNav.js"></script>
 	<script src="../defaults/htlFooter.js"></script>
-	
 	<script src="/js/main.js"></script>
+	<script>
+		window.addEventListener("load", function () {
+			htlNav.parseAll(true); //nav
+		});
+	</script>
 </body>
+
 </html>

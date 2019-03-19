@@ -37,10 +37,15 @@
     <!--Defaults-->
     <script src="./defaults/htlNav.js"></script>
     <script src="./defaults/htlFooter.js"></script>
-    
+
     <script src="/js/announcements.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            htlNav.parseAll(false); //nav
+        });
+    </script>
 </body>
 <!--You wanna try some ciscodisco()?-->
 

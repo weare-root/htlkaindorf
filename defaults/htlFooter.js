@@ -1,6 +1,6 @@
 const htlFooter = {
-    getFooterText: () => {
-        return `
+  getFooterText: () => {
+    return `
         <footer>
             <ul class="flex footer-links">
                 <li><a href="../termine">Termine</a></li>
@@ -15,20 +15,20 @@ const htlFooter = {
             </div>
         </footer>
         `;
-    },
-    parseAll:() => {
-        let jars = document.getElementsByTagName('htl-footer');
-        Array.from(jars).forEach(element => {
-            element.innerHTML = htlFooter.getFooterText();
-        });
-    }
+  },
+  parseAll: () => {
+    let jars = document.getElementsByTagName('htl-footer');
+    Array.from(jars).forEach(element => {
+      element.innerHTML = htlFooter.getFooterText();
+    });
+  }
 };
 
 (() => {
-    let style = document.createElement('style');
-    style.type='text/css';
-    
-    let tags = `
+  let style = document.createElement('style');
+  style.type = 'text/css';
+
+  let tags = `
     footer {
         bottom: 0;
         width: 100%;
@@ -91,8 +91,8 @@ const htlFooter = {
           footer .footer-images #eu-flag-co-founded img {
             height: 60px; }
     `;
-    
-    style.appendChild(document.createTextNode(tags));
 
-    document.body.appendChild(style);
+  style.appendChild(document.createTextNode(tags));
+
+  document.body.appendChild(style);
 })();

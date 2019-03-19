@@ -1,7 +1,7 @@
 const htlNav = {
-    getNavText : () => {
-        return `
-        <nav class="abteilungen flex unscrolled">
+  getNavText: (scrolled) => {
+    return `
+        <nav class="abteilungen flex ${scrolled ? "scrolled":"unscrolled"}">
             <div id="leftAbt">
                 <a class="abt" href="/abteilung/informatik.html" id="abt-info">
                     <img id="abt-logo-info" class="abtLogo" src="/images/abteilungen/info.png" alt="Info Small Logo">
@@ -71,95 +71,117 @@ const htlNav = {
             </div>
         </div>
         `;
-    },
-    parseAll: () => {
-        //add the NAV
-        let jars = document.getElementsByTagName('htl-nav');
-        Array.from(jars).forEach(element => {
-            element.innerHTML = htlNav.getNavText();
-        });
+  },
+  parseAll: (scrolled) => {
+    //add the NAV
+    let jars = document.getElementsByTagName('htl-nav');
+    Array.from(jars).forEach(element => {
+      element.innerHTML = htlNav.getNavText(scrolled);
+    });
 
-        //THE JAVASCRIPT FOR THE NAV
-        const home = document.getElementById("kaindorfText");
-        home.addEventListener("click", () => {
-            window.location.href = "/";
-            return false;
-        });
+    /*
+     * THE JAVASCRIPT FOR THE NAV
+     */
+    const home = document.getElementById("kaindorfText");
+    home.addEventListener("click", () => {
+      window.location.href = "/";
+      return false;
+    });
 
-        //ABTS HOVER
-        const abts = document.getElementsByClassName("abt");
-        for (let abt of abts) {
-            abt.addEventListener("mouseover", () => {
-                let query = "#" + abt.id + " .abtName";
-                const name = document.querySelector(query);
-                name.className = name.className + "-hovered";
-            });
-            abt.addEventListener("mouseout", () => {
-                let query = "#" + abt.id + " .abtName-hovered";
-                const name = document.querySelector(query);
-                name.className = name.className.replace("-hovered", "");
-            });
-        }
-
-        //THE MENU BAR BUTTON
-        const btnCont = document.getElementsByClassName("btn-container")[0];
-        const btnL1 = document.querySelector(".btn #line1");
-        const btnL2 = document.querySelector(".btn #line2");
-        const middle = document.getElementsByClassName("middle")[0];
-        const popup = document.getElementsByClassName("popup")[0];
-        let state = false;
-        btnCont.addEventListener("click", () => {
-            var pos1 = btnL1.getAttribute("y2");
-            var pos2 = btnL2.getAttribute("y2");
-            popup.classList.toggle("open");
-            if (state === false) {
-                state = true;
-
-                middle.id = "middle-opened";
-
-                int1 = setInterval(function () {
-                    if (pos1 > 48) {
-                        clearInterval(int1);
-                    }
-                    pos1++;
-                    btnL1.setAttribute("y2", pos1);
-                }, 2);
-                int2 = setInterval(function () {
-                    if (pos2 < 12) {
-                        clearInterval(int2);
-                    }
-                    pos2--;
-                    btnL2.setAttribute("y2", pos2);
-                }, 2);
-            } else if (state === true) {
-                state = false;
-
-                middle.id = "middle-closed";
-
-                int1 = setInterval(function () {
-                    if (pos1 < 12) {
-                        clearInterval(int1);
-                    }
-                    pos1--;
-                    btnL1.setAttribute("y2", pos1);
-                }, 2);
-                int2 = setInterval(function () {
-                    if (pos2 > 48) {
-                        clearInterval(int2);
-                    }
-                    pos2++;
-                    btnL2.setAttribute("y2", pos2);
-                }, 2);
-            }
-        });
+    //ABTS HOVER
+    const abts = document.getElementsByClassName("abt");
+    for (let abt of abts) {
+      abt.addEventListener("mouseover", () => {
+        let query = "#" + abt.id + " .abtName";
+        const name = document.querySelector(query);
+        name.className = name.className + "-hovered";
+      });
+      abt.addEventListener("mouseout", () => {
+        let query = "#" + abt.id + " .abtName-hovered";
+        const name = document.querySelector(query);
+        name.className = name.className.replace("-hovered", "");
+      });
     }
+
+    //abt scrolled
+    if (scrolled) {
+      for (let abt of abts) {
+        abt.id = abt.id + '-scrolled';
+      }
+    }
+
+    //ON RESIZE
+    window.addEventListener('resize', () => {
+      let kdText = document.getElementById('kaindorfText') || document.getElementById('kaindorfText-scrolled');
+
+      if (!swipeTrue && window.innerWidth < 600) {
+        if (!kdText.id.endsWith('-scrolled')) {
+          kdText.id = kdText.id + '-scrolled';
+        }
+      } else {
+        kdText.id = kdText.id.replace('-scrolled', '');
+      }
+    });
+
+    //THE MENU BAR BUTTON
+    const btnCont = document.getElementsByClassName("btn-container")[0];
+    const btnL1 = document.querySelector(".btn #line1");
+    const btnL2 = document.querySelector(".btn #line2");
+    const middle = document.getElementsByClassName("middle")[0];
+    const popup = document.getElementsByClassName("popup")[0];
+    let state = false;
+    btnCont.addEventListener("click", () => {
+      var pos1 = btnL1.getAttribute("y2");
+      var pos2 = btnL2.getAttribute("y2");
+      popup.classList.toggle("open");
+      if (state === false) {
+        state = true;
+
+        middle.id = "middle-opened";
+
+        int1 = setInterval(function () {
+          if (pos1 > 48) {
+            clearInterval(int1);
+          }
+          pos1++;
+          btnL1.setAttribute("y2", pos1);
+        }, 2);
+        int2 = setInterval(function () {
+          if (pos2 < 12) {
+            clearInterval(int2);
+          }
+          pos2--;
+          btnL2.setAttribute("y2", pos2);
+        }, 2);
+      } else if (state === true) {
+        state = false;
+
+        middle.id = "middle-closed";
+
+        int1 = setInterval(function () {
+          if (pos1 < 12) {
+            clearInterval(int1);
+          }
+          pos1--;
+          btnL1.setAttribute("y2", pos1);
+        }, 2);
+        int2 = setInterval(function () {
+          if (pos2 > 48) {
+            clearInterval(int2);
+          }
+          pos2++;
+          btnL2.setAttribute("y2", pos2);
+        }, 2);
+      }
+    });
+  }
 };
 
 (() => {
-    let style = document.createElement('style');
-    style.type='text/css';
+  let style = document.createElement('style');
+  style.type = 'text/css';
 
-    let tags = `
+  let tags = `
     .abteilungen {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -475,6 +497,7 @@ const htlNav = {
               transform: none !important;
               margin: 10px auto;
               color: #631175; 
+              background-color: white;
             }
               .nav-menu .popup .nav-logos a:hover {
                 background-color: #631175;
@@ -545,6 +568,6 @@ const htlNav = {
           #kaindorfText #kaindorfText-top #bold {
             font-weight: 700; }
     `
-    style.appendChild(document.createTextNode(tags));
-    document.body.appendChild(style);
+  style.appendChild(document.createTextNode(tags));
+  document.body.appendChild(style);
 })();

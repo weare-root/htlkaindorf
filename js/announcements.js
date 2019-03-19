@@ -23,10 +23,10 @@ $.getJSON("/../stuff/announcements.json", function (data) {
     });
 });
 
-$.getJSON("/../stuff/aktuelles.json", function (data) {
+$.getJSON("/../stuff/aktuelles/aktuelles.json", function (data) {
     var items = [];
     $.each(data, function (key, val) {
-        let url = "/stuff/aktuelles-preview/" + val.preview;
+        let url = "/stuff/aktuelles/preview/" + val.preview;
         let text = val.text;
         let link = "/stuff/aktuelles/" + val.link;
         $(".aktuelles").append(`<div class="aktuelles-wrapper"><a href="${link}"><div><img src="${url}"/><p>${text}"</p></div></a></div>`);

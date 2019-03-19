@@ -26,18 +26,6 @@ let swipe = (delta) => {
 		swipeTrue = false;
 	}
 };
-//ON RESIZE
-window.addEventListener('resize', () => {
-	let kdText = document.getElementById('kaindorfText') || document.getElementById('kaindorfText-scrolled');
-
-	if (!swipeTrue && window.innerWidth < 600) {
-		if (!kdText.id.endsWith('-scrolled')) {
-			kdText.id = kdText.id + '-scrolled';
-		}
-	} else {
-		kdText.id = kdText.id.replace('-scrolled', '');
-	}
-});
 
 document.addEventListener('wheel', (e) => {
 	swipe(e.deltaY);
