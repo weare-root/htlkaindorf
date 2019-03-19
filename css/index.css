@@ -7,7 +7,7 @@
 
 #afterScroll {
   position: absolute;
-  left: -100%;
+  left: -100%; 
 }
 
 #beforeScroll {
