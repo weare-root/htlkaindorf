@@ -3,7 +3,7 @@ const htlFooter = {
     return `
         <footer>
             <ul class="flex footer-links">
-                <li><a href="../termine">Termine</a></li>
+                <li><a href="../calendar">Calendar</a></li>
                 <li><a href="../impressum">Impressum</a></li>
                 <li><a href="../dsgvo">DSGVO</a></li>
                 <li><a href="../links">Links</a></li>
