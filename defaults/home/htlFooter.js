@@ -3,15 +3,15 @@ const htlFooter = {
     return `
         <footer>
             <ul class="flex footer-links">
-                <li><a href="../calendar/index.html">Calendar</a></li>
-                <li><a href="../impressum/index.html">Impressum</a></li>
-                <li><a href="../dsgvo/index.html">DSGVO</a></li>
-                <li><a href="../links/index.html">Links</a></li>
+                <li><a href="./calendar/index.html">Calendar</a></li>
+                <li><a href="./impressum/index.html">Impressum</a></li>
+                <li><a href="./dsgvo/index.html">DSGVO</a></li>
+                <li><a href="./links/index.html">Links</a></li>
             </ul>
             <div class="footer-images">
-                <img id="eu-flag-co-founded" src="../images/eu_flag_co_funded.jpg" alt="eu-flag-co-funded" />
+                <img id="eu-flag-co-founded" src="./images/eu_flag_co_funded.jpg" alt="eu-flag-co-funded" />
                 <a id="facebook" href="https://www.facebook.com/HTBLAKaindorf" target="_blank" rel="noreferrer noopener"><img
-                        src="../images/face_logo.png" alt="Facebook-Logo" /></a>
+                        src="./images/face_logo.png" alt="Facebook-Logo" /></a>
             </div>
         </footer>
         `;

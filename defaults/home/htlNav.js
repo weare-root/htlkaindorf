@@ -3,12 +3,12 @@ const htlNav = {
     return `
         <nav class="abteilungen flex ${scrolled ? "scrolled":"unscrolled"}">
             <div id="leftAbt">
-                <a class="abt" href="../abteilung/informatik.html" id="abt-info">
-                    <img id="abt-logo-info" class="abtLogo" src="../images/abteilungen/info.png" alt="Info Small Logo">
+                <a class="abt" href=./abteilung/informatik.html" id="abt-info">
+                    <img id="abt-logo-info" class="abtLogo" src="./images/abteilungen/info.png" alt="Info Small Logo">
                     <div class="abtName" id="abt-name-info">Informatik</div>
                 </a>
-                <a class="abt" href="../abteilung/automatisierung.html" id="abt-aut">
-                    <img id="abt-logo-aut" class="abtLogo" src="../images/abteilungen/aut.png" alt="Aut Small Logo">
+                <a class="abt" href="./abteilung/automatisierung.html" id="abt-aut">
+                    <img id="abt-logo-aut" class="abtLogo" src="./images/abteilungen/aut.png" alt="Aut Small Logo">
                     <div class="abtName" id="abt-name-aut">Automatisierung</div>
                 </a>
             </div>
@@ -23,11 +23,11 @@ const htlNav = {
             <!--<img id="kaindorfText" src="./images/kaindorfText.png" alt="Kaindorf Text">-->
             <div id="rightAbt">
                 <a class="abt" href="./abteilung/mechatronik.html" id="abt-mech">
-                    <img id="abt-logo-mech" class="abtLogo" src="../images/abteilungen/mech.png" alt="Mech Small Logo">
+                    <img id="abt-logo-mech" class="abtLogo" src="./images/abteilungen/mech.png" alt="Mech Small Logo">
                     <div class="abtName" id="abt-name-mech">Mechatronik</div>
                 </a>
                 <a class="abt" href="./abteilung/robotik.html" id="abt-rob">
-                    <img id="abt-logo-rob" class="abtLogo" src="../images/abteilungen/rob.png" alt="Rob Small Logo">
+                    <img id="abt-logo-rob" class="abtLogo" src="./images/abteilungen/rob.png" alt="Rob Small Logo">
                     <div class="abtName" id="abt-name-rob">Robotik</div>
                 </a>
             </div>
@@ -51,20 +51,20 @@ const htlNav = {
                     <li><a href="#">Kontakt</a></li>
                 </ul>
                 <div class="flex nav-logos">
-                    <a class="flex" href="../abteilung/informatik.html" id="abt-info">
-                        <img class="abtLogo abt-logos-nm" src="../images/abteilungen/info.png" alt="Info Small Logo">
+                    <a class="flex" href="./abteilung/informatik.html" id="abt-info">
+                        <img class="abtLogo abt-logos-nm" src="./images/abteilungen/info.png" alt="Info Small Logo">
                         <div id="abt-name-info">Informatik</div>
                     </a>
-                    <a class="flex" href="../abteilung/automatisierung.html" id="abt-aut">
-                        <img class="abtLogo abt-logos-nm" src="../images/abteilungen/aut.png" alt="Aut Small Logo">
+                    <a class="flex" href="./abteilung/automatisierung.html" id="abt-aut">
+                        <img class="abtLogo abt-logos-nm" src="./images/abteilungen/aut.png" alt="Aut Small Logo">
                         <div id="abt-name-aut">Automatisierung</div>
                     </a>
-                    <a class="flex" href="../abteilung/mechatronik.html" id="abt-mech">
-                        <img class="abtLogo abt-logos-nm" src="../images/abteilungen/mech.png" alt="Mech Small Logo">
+                    <a class="flex" href="./abteilung/mechatronik.html" id="abt-mech">
+                        <img class="abtLogo abt-logos-nm" src="./images/abteilungen/mech.png" alt="Mech Small Logo">
                         <div id="abt-name-mech">Mechatronik</div>
                     </a>
-                    <a class="flex" href="../abteilung/robotik.html">
-                        <img class="abtLogo abt-logos-nm" src="../images/abteilungen/rob.png" alt="Rob Small Logo">
+                    <a class="flex" href="./abteilung/robotik.html">
+                        <img class="abtLogo abt-logos-nm" src="./images/abteilungen/rob.png" alt="Rob Small Logo">
                         <div id="abt-name-rob">Robotik</div>
                     </a>
                 </div>
